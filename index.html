@@ -1,0 +1,258 @@
+<!-- @File: index.html -->
+<!-- @Time: 2024/07/18 00:00:00 -->
+<!-- @Author: Shaojie Zhang -->
+<!-- @Version: 1.0 -->
+<!-- @Desc: Demo of Homepage -->
+
+<!doctype html>
+<html lang = "en" class = "no-js">
+    <head>
+        <!-- 定义字体 -->
+        <meta charset = "UTF-8">
+        <!-- 定义网站名 -->
+        <title>Shaojie Zhang - Homepage</title>
+        <link rel = "icon" href ="images/Schools/BUPT.ico"> <!-- 小图标 -->
+        <!-- 加载对应的css文件，配置默认style -->
+        <link rel = "stylesheet" href = "assets/css/main.css"/>
+        <link rel = "stylesheet" href = "assets/css/academicons.css"/>
+    </head>
+    
+    <!-- body部分 -->
+    <body>
+        <!-- 上边栏目录 -->
+        <div class = "masthead">
+            <div class = "masthead__inner-wrap">
+                <div class = "masthead__menu">
+                    <nav id = "site-nav" class = "greedy-nav">
+                        <button>
+                            <div class = "navicon"></div>
+                        </button>
+                        <ul class = "visible-links">
+                            <li 
+                                class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
+                                <a href="#-About-me">Homepage</a>
+                            </li>
+                            <!-- About-me -->
+                            <li 
+                                class="masthead__menu-item">
+                                <a href="/#-About-me">About-me</a>
+                            </li>
+                            <!-- News -->
+                            <li 
+                                class = "masthead__menu-item">
+                                <a href="/#-News">News</a>
+                            </li>
+                            <!-- Experience -->
+                            <li 
+                                class = "masthead__menu-item">
+                                <a href = "/#-Experience">Experience</a>
+                            </li>
+                            <!-- Main Publications -->
+                            <li 
+                                class = "masthead__menu-item">
+                                <a href = "/#-Publications">Main Publications</a>
+                            </li>
+                            <!-- Honors and Awards -->
+                            <li 
+                                class = "masthead__menu-item">
+                                <a href="/#-Honors-and-Awards">Honors and Awards</a>
+                            </li>        
+                        </ul>
+                        <ul class="hidden-links hidden"></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div id = "main" role = "main">
+            <!-- 新建sidebar sticky（粘性侧边栏）容器 -->
+            <div class = "sidebar sticky">
+                <!-- 基于http://schema.org/Person定义一个单独的对象 -->
+                <div itemscope itemtype = "http://schema.org/Person" class = "profile_box">
+
+                    <!-- 为.author__avatar类的图片定义格式 -->
+                    <style>
+                        .author__avatar img {
+                            width: 150px;
+                            height: auto;
+                        }
+                    </style>
+
+                    <!-- 新建一个author__avatar容器 -->
+                    <div class = "author__avatar">
+                        <!-- 定义容器里的图片 -->
+                        <img src = "images/ShaojieZhang/ShaojieZhang.png" alt = "the img of Shaojie Zhang">
+                    </div>
+                    
+                    <!-- 重定义，使得.author__bio的内容只在一行显示 -->
+                    <!-- <style>
+                        .author__bio {
+                            display: flex;
+                            flex-direction: row;
+                            white-space: nowrap;
+                        }
+                    </style> -->
+
+                    <!-- 新建一个author__content容器，存储作者的名字等内容 -->
+                    <div class = "author__content">
+                        <h3 class = "author__name">Shaojie Zhang</h3>
+                        <p class = "author__bio">Intelligent Cognitive Systems Lab (iCOST), Beijing University of Posts and Telecommunications (BUPT)</p>
+                    </div>
+                    
+                    <!-- 新建一个author__urls-wrapper容器，存储作者url等信息 -->
+                    <div class = "author__urls-wrapper">
+                        <ul class = "author__urls social-icons">
+                            <!-- 地址 -->
+                            <li>
+                                <i class = "fa fa-fw fa-map-marker" aria-hidden = "true"></i>Beijing, China
+                            </li>
+
+                            <!-- Email -->
+                            <li>
+                                <a href = "mailto:zsj@bupt.edu.cn"><i class = "fas fa-fw fa-envelope" aria-hidden = "true"></i>Email</a>
+                            </li>
+
+                            <!-- Github -->
+                            <li>
+                                <a href = "https://github.com/zhshj0110"><i class="fab fa-fw fa-github" aria-hidden="true"></i>Github</a>
+                            </li>
+
+                            <!-- Google Scholar -->
+                            <li>
+                                <a href = "https://scholar.google.com.hk/citations?hl=zh-CN&user=kcZH8esAAAAJ">
+                                    <i class = "fas fa-fw fa-graduation-cap"></i>Google Scholar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <article class = "page" itemscope itemtype = "http://schema.org/CreativeWork">
+                <div class="page__inner-wrap">
+                    <section class = "page__content" itemprop = "text">
+                        <!-- About-me的内容-->
+                        <p><span class="anchor" id="-About-me"></span></p>
+                        <h1>🧍‍♂️About-me</h1>
+                        <p>
+                            My name is Liu Jinfu, a master student in <a href = "https://www.bupt.edu.cn/">Beijing University of Posts and Telecommunications</a>,
+                            supervised by Prof.<a href = "https://teacher.bupt.edu.cn/yinjianqin/zh_CN/index.htm">Jianqin Yin</a>. 
+                        </p>
+                        <p>
+                            Before that, I received my B.S. degree in <a href = "https://www.bupt.edu.cn/">Beijing University of Posts and Telecommunications</a>.
+                        </p>
+                        <p>
+                            I am also a research intern in <a href="https://www.mi.com/miai">Xiaomi AI Lab</a>.
+                        </p>
+                        <p>
+                            My research interests include <b>Multi-modal Large Models</b>, <b>Human Activity Analysis</b> and <b>Human Motion Synthetic</b>.
+                        </p>
+
+                        <!-- -news的内容-->
+                        <h1 id="-News">🔥News</h1>
+                        <ul>
+                            <li>
+                                <em>2024.06</em>:  🎉 CVPR 2024 AVA Accessibility Vision and Autonomy Challenge #Keypoint Track <b>Champion</b> Solution.
+                            </li>
+                            <li>
+                                <em>2024.04</em>:  🎉 One papers is accepted by TCSVT 2024.
+                            </li>
+                            <li>
+                                <em>2024.01</em>:  🎉 One papers is accepted by PR 2024.
+                            </li>
+                            <li>
+                                <em>2024.06</em>:  🎉 CVPR 2023 AVA Accessibility Vision and Autonomy Challenge #Keypoint Track Second Place Solution.
+                            </li>
+                        </ul>
+
+                        <!-- -Experience的内容-->
+                        <h1 id="-Experience">📖Experience</h1>
+                        <ul>
+                            <li>
+                                <em>2024.05-Now</em>: <b>Research Intern in Xiaomi</b>
+                            </li>
+                            <li>
+                                <em>2022.09-Now</em>: <b>M.S. in Beijing University of Posts and Telecommunications</b>
+                            </li>
+                            <li>
+                                <em>2018.09-2022.06</em>: <b>B.S. in Beijing University of Posts and Telecommunications</b>
+                            </li>
+
+                        </ul>
+                        
+                        <!-- -Publications的内容-->
+                        <h1 id="-Publications">📝Main Publications</h1>
+                        <ul>
+                            <li>
+                                <em></em><b>Shaojie Zhang</b>, Jianqin Yin, Yonghao Dang.
+                                SiT-MLP: A Simple MLP with Point-wise Topology Feature Learning for Skeleton-based Action Recognition.
+                                IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024. <b>(CCF B)</b>
+                                <a href = "https://ieeexplore.ieee.org/document/10495051">[Paper]</a>
+                                <a href = "https://github.com/zhshj0110/SiT-MLP">[Code]</a>
+                            </li> 
+                            <li>
+                                <em></em>Yonghao Dang, Jianqin Yin, <b>Shaojie Zhang</b>, Jiping Liu, Yanzhu Hu. 
+                                Kinematics Modeling Network for Video-based Human Pose Estimation. 
+                                ELSEVIER Pattern Recognition (PR), 2024. <b>(CCF B)</b>
+                                <a href = "https://www.sciencedirect.com/science/article/pii/S0031320324000384">[Paper]</a>
+                            </li>
+                            <li>
+                                <em></em>Yonghao Dang, Jianqin Yin, <b>Shaojie Zhang</b>. 
+                                Relation-Based Associative Joint Location for Human Pose Estimation in Videos. 
+                                IEEE Transactions on Image Processing (TIP), 2022. <b>(CCF B)</b>
+                                <a href = "https://ieeexplore.ieee.org/document/9786543">[Paper]</a>
+                            </li>
+                            <li>
+                                <em></em><b>Shaojie Zhang</b>, Jianqin Yin, Yonghao Dang.
+                                Spatial-Temporal Decoupling Contrastive Learning for Skeleton-based Human Action Recognition.
+                                <!-- IEEE Transactions on Image Processing (TIP), 2022. <b>(CCF B)</b> -->
+                                <a href = "https://arxiv.org/abs/2312.15144">[Paper]</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- -Honors-and-Awards的内容-->
+                        <h1 id="-Honors-and-Awards">🎖Honors and Awards</h1>
+                        <ul>
+                            <li>
+                                <em>2024.06</em>: <b>Champion</b> of CVPR 2024 AVA Accessibility Vision and Autonomy Challenge.
+                            </li>
+                            <li>
+                                <em>2023.10</em>: The First Prize Scholarship of Beijing University of Posts and Telecommunications.
+                            </li>
+                            <li>
+                                <em>2023.06</em>: Second Place of CVPR 2023 AVA Accessibility Vision and Autonomy Challenge.
+                            </li>
+                            <li>
+                                <em>2023.05</em>: Honorable Mention Prize of CCF 2023 Mobile Robot Grasping and Navigation Challenge.
+                            </li>
+                            <li>
+                                <em>2022.10</em>: The First Prize Scholarship of Beijing University of Posts and Telecommunications.
+                            </li> 
+                            <li>
+                                <em>2022.06</em>: <b>Outstanding Graduate</b> of Beijing.
+                            </li>
+                            <li>
+                                <em>2021.12</em>: Top-5 Solution of 2021 CCF-BDCI-Challenge-Action-Recognition.
+                            </li>
+                            <li>
+                                <em>2021.10</em>: National Encouragement scholarship.
+                            </li>
+                            <li>
+                                <em>2021.10</em>: Merit Student of Beijing University of Posts and Telecommunications.
+                            </li>
+                            <li>
+                                <em>2020.10</em>: National Encouragement scholarship.
+                            </li>
+                            <li>
+                                <em>2020.10</em>: Merit Student of Beijing University of Posts and Telecommunications.
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </article>
+        <script src="assets/js/main.min.js"></script>
+    </body>
+</html>
