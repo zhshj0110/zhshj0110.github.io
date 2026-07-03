@@ -1,8 +1,6 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-06-01 00:00:00
 inline: true
-related_posts: false
 ---
-
-A simple inline announcement.
+🎉 CVPR 2024 AVA Accessibility Vision and Autonomy Challenge #Keypoint Track **Champion** Solution.
