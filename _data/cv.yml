@@ -1,0 +1,45 @@
+- title: Experience
+  type: time_table
+  contents:
+    - title: Research Intern
+      institution: Xiaomi AI Lab
+      year: 2024.05 - Now
+    - title: M.S. Student
+      institution: Beijing University of Posts and Telecommunications
+      year: 2022.09 - Now
+    - title: B.S.
+      institution: Beijing University of Posts and Telecommunications
+      year: 2018.09 - 2022.06
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2024.06
+      items:
+        - Champion of CVPR 2024 AVA Accessibility Vision and Autonomy Challenge
+    - year: 2023.10
+      items:
+        - The First Prize Scholarship of Beijing University of Posts and Telecommunications
+    - year: 2023.06
+      items:
+        - Second Place of CVPR 2023 AVA Accessibility Vision and Autonomy Challenge
+    - year: 2023.05
+      items:
+        - Honorable Mention Prize of CCF 2023 Mobile Robot Grasping and Navigation Challenge
+    - year: 2022.10
+      items:
+        - The First Prize Scholarship of Beijing University of Posts and Telecommunications
+    - year: 2022.06
+      items:
+        - Outstanding Graduate of Beijing
+    - year: 2021.12
+      items:
+        - Top-5 Solution of 2021 CCF-BDCI Action Recognition Challenge
+    - year: 2021.10
+      items:
+        - National Encouragement Scholarship
+        - Merit Student of Beijing University of Posts and Telecommunications
+    - year: 2020.10
+      items:
+        - National Encouragement Scholarship
+        - Merit Student of Beijing University of Posts and Telecommunications
