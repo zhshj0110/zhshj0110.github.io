@@ -2,7 +2,6 @@
 layout: about
 title: About
 permalink: /
-subtitle: Intelligent Cognitive Systems Lab (iCOST), Beijing University of Posts and Telecommunications (BUPT).
 
 profile:
   align: right
