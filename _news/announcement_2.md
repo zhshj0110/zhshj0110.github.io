@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2024-04-01 00:00:00
+date: 2026-06-18 00:00:00
 inline: true
 ---
-🎉 One paper is accepted by TCSVT 2024.
+🎉 Two papers have been accepted by **ECCV 2026**.
