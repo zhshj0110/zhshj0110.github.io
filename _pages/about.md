@@ -6,8 +6,6 @@ subtitle: Intelligent Cognitive Systems Lab (iCOST), Beijing University of Posts
 
 profile:
   align: right
-  more_info: >
-    <p>Beijing, China</p>
 
 selected_papers: true
 social: true
