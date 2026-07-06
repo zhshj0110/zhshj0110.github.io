@@ -415,6 +415,13 @@ git commit -m "feat: publications bibliography (4 papers)"
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025.06
+      items:
+        - Outstanding Master's Graduates of Beijing
+        - Outstanding Master's Thesis from Beijing University of Posts and Telecommunications
+    - year: 2024.11
+      items:
+        - National Scholarship
     - year: 2024.06
       items:
         - Champion of CVPR 2024 AVA Accessibility Vision and Autonomy Challenge
