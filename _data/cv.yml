@@ -17,6 +17,13 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025.06
+      items:
+        - Outstanding Master's Graduates of Beijing
+        - Outstanding Master's Thesis from Beijing University of Posts and Telecommunications
+    - year: 2024.11
+      items:
+        - National Scholarship
     - year: 2024.06
       items:
         - Champion of CVPR 2024 AVA Accessibility Vision and Autonomy Challenge
@@ -34,7 +41,7 @@
         - The First Prize Scholarship of Beijing University of Posts and Telecommunications
     - year: 2022.06
       items:
-        - Outstanding Graduate of Beijing
+        - Outstanding Bachelor's Graduate of Beijing
     - year: 2021.12
       items:
         - Top-5 Solution of 2021 CCF-BDCI Action Recognition Challenge
