@@ -61,7 +61,7 @@
           </li>
 
           {% if page.layout == 'about' %}
-            {% if page.announcements.enabled %}
+            {% if site.news.size > 0 %}
               <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
             {% endif %}
             {% if page.research %}
@@ -72,6 +72,10 @@
               <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
             {% endif %}
             <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+            {% assign honors = site.data.cv | where: 'title', 'Honors and Awards' | first %}
+            {% if honors.contents %}
+              <li class="nav-item"><a class="nav-link" href="#honors">Honors</a></li>
+            {% endif %}
           {% else %}
             <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}#publications">Publications</a></li>
           {% endif %}

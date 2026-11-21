@@ -109,6 +109,10 @@
     margin-bottom: 0;
     color: inherit;
 
+    tr[id] {
+      scroll-margin-top: 72px;
+    }
+
     th,
     td {
       padding: 0.24rem 0;
@@ -169,16 +173,28 @@
     }
   }
 
-  .home-section-heading {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    column-gap: 1rem;
+  .home-honors {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-    a {
-      margin-bottom: 1rem;
+    > li {
+      display: grid;
+      grid-template-columns: 4rem minmax(0, 1fr);
+      gap: 0.75rem;
+    }
+
+    time {
+      color: var(--home-muted);
       font-size: 0.875rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.15rem;
     }
   }
 

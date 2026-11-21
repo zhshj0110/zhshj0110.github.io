@@ -147,9 +147,8 @@ newsletter:
 
 collections:
   news:
-    defaults:
-      layout: post
-    output: true
+    output: false
+    permalink: "/#news-:name"
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -177,6 +176,7 @@ exclude:
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
+  - docs/
   - FAQ.md
   - Gemfile
   - Gemfile.lock

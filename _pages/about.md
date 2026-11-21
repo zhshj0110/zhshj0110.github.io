@@ -7,10 +7,6 @@ role: Research Engineer · Xiaomi MiLM Plus
 portrait: /assets/img/shaojie-zhang.jpg
 social: true
 
-announcements:
-  enabled: true
-  limit: 5
-
 research:
   - title: Multimodal Large Models
     description: Vision-language models for visual understanding, OCR, and GUI interaction.

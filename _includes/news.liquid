@@ -1,37 +1,13 @@
-<div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
-    <div
-      class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
-      {% endif %}
-    >
-      <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
-        {% assign date_format = include.date_format | default: '%b %d, %Y' %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: var(--news-date-width, 20%)">
-              <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: date_format }}</time>
-            </th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
-  {% else %}
-    <p>No news so far...</p>
-  {% endif %}
+<div class="news table-responsive">
+  <table class="table table-sm table-borderless">
+    {% assign news = site.news | reverse %}
+    {% for item in news %}
+      <tr id="{{ item.url | split: '#' | last | escape }}">
+        <th scope="row" style="width: var(--news-date-width, 20%)">
+          <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
+        </th>
+        <td>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </div>

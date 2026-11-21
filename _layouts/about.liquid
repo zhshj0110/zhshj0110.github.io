@@ -40,15 +40,10 @@ layout: default
     {% endif %}
   </section>
 
-  {% if page.announcements.enabled %}
+  {% if site.news.size > 0 %}
     <section id="news" class="home-section" aria-labelledby="home-news">
-      <div class="home-section-heading">
-        <h2 id="home-news">News</h2>
-        {% if page.announcements.limit and site.news.size > page.announcements.limit %}
-          <a href="{{ '/news/' | relative_url }}">All news &rarr;</a>
-        {% endif %}
-      </div>
-      {% include news.liquid limit=true date_format='%b %Y' %}
+      <h2 id="home-news">News</h2>
+      {% include news.liquid %}
     </section>
   {% endif %}
 
@@ -90,4 +85,23 @@ layout: default
       {% bibliography --group_by none %}
     </div>
   </section>
+
+  {% assign honors = site.data.cv | where: 'title', 'Honors and Awards' | first %}
+  {% if honors.contents %}
+    <section id="honors" class="home-section" aria-labelledby="home-honors">
+      <h2 id="home-honors">Honors and Awards</h2>
+      <ul class="home-honors">
+        {% for award_group in honors.contents %}
+          <li>
+            <time datetime="{{ award_group.year | replace: '.', '-' }}">{{ award_group.year }}</time>
+            <ul>
+              {% for award in award_group.items %}
+                <li>{{ award }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 </div>

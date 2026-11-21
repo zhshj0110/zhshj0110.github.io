@@ -17,39 +17,39 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2025.06
+    - year: "2025.06"
       items:
         - Outstanding Master's Graduates of Beijing
         - Outstanding Master's Thesis from Beijing University of Posts and Telecommunications
-    - year: 2024.11
+    - year: "2024.11"
       items:
         - National Scholarship
-    - year: 2024.06
+    - year: "2024.06"
       items:
         - Champion of CVPR 2024 AVA Accessibility Vision and Autonomy Challenge
-    - year: 2023.10
+    - year: "2023.10"
       items:
         - The First Prize Scholarship of Beijing University of Posts and Telecommunications
-    - year: 2023.06
+    - year: "2023.06"
       items:
         - Second Place of CVPR 2023 AVA Accessibility Vision and Autonomy Challenge
-    - year: 2023.05
+    - year: "2023.05"
       items:
         - Honorable Mention Prize of CCF 2023 Mobile Robot Grasping and Navigation Challenge
-    - year: 2022.10
+    - year: "2022.10"
       items:
         - The First Prize Scholarship of Beijing University of Posts and Telecommunications
-    - year: 2022.06
+    - year: "2022.06"
       items:
         - Outstanding Bachelor's Graduate of Beijing
-    - year: 2021.12
+    - year: "2021.12"
       items:
         - Top-5 Solution of 2021 CCF-BDCI Action Recognition Challenge
-    - year: 2021.10
+    - year: "2021.10"
       items:
         - National Encouragement Scholarship
         - Merit Student of Beijing University of Posts and Telecommunications
-    - year: 2020.10
+    - year: "2020.10"
       items:
         - National Encouragement Scholarship
         - Merit Student of Beijing University of Posts and Telecommunications
