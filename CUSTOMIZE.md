@@ -602,12 +602,10 @@ The theme offers several options for customizing how publications are displayed:
 ```yaml
 enable_publication_thumbnails: true
 max_author_limit: 3
-more_authors_animation_delay: 10
 ```
 
 - `enable_publication_thumbnails`: When `true`, displays preview images for publications (if specified in the BibTeX entry with the `preview` field). Set to `false` to disable thumbnails for all publications.
-- `max_author_limit`: Sets the maximum number of authors shown initially for each publication. If a publication has more authors, they are hidden behind a "more authors" link. Leave blank to always show all authors.
-- `more_authors_animation_delay`: Controls the animation speed (in milliseconds) when revealing additional authors. A smaller value means faster animation.
+- `max_author_limit`: Sets the maximum number of authors shown initially for each publication. Visitors can expand the remaining authors with the "more authors" button. Leave blank to always show all authors.
 
 To add a thumbnail to a publication, include a `preview` field in your BibTeX entry:
 

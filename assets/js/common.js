@@ -3,6 +3,15 @@ $(document).ready(function () {
     $(".academic-home #navbarNav.show").collapse("hide");
   });
 
+  $(".more-authors").on("click", function () {
+    const authors = document.getElementById(this.getAttribute("aria-controls"));
+    const expanded = authors.hidden;
+    authors.hidden = !expanded;
+    this.previousElementSibling.hidden = expanded;
+    this.setAttribute("aria-expanded", String(expanded));
+    this.textContent = expanded ? "Show fewer authors" : this.dataset.collapsedLabel;
+  });
+
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");

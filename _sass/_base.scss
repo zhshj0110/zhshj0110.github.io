@@ -781,6 +781,10 @@ footer.sticky-bottom {
       }
 
       .author {
+        strong {
+          font-weight: 700;
+        }
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -790,15 +794,18 @@ footer.sticky-bottom {
           }
         }
 
-        > em {
-          border-bottom: 1px solid;
-          font-style: normal;
-        }
-
-        > span.more-authors {
+        > .more-authors {
+          padding: 0;
+          border: 0;
+          background: none;
+          font: inherit;
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
+
+          &[aria-expanded="true"] {
+            margin-left: 0.45em;
+          }
 
           &:hover {
             color: var(--global-text-color);

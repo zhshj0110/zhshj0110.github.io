@@ -241,14 +241,22 @@
             serif;
         }
 
+        .publication-venue {
+          margin-bottom: 0.2rem;
+          color: var(--home-accent);
+          font-size: 0.875rem;
+          font-weight: 700;
+        }
+
+        .publication-preprint {
+          color: var(--home-muted);
+          font-weight: 500;
+        }
+
         .author,
         .periodical {
           color: var(--home-muted);
           font-size: 0.875rem;
-        }
-
-        .periodical {
-          color: var(--home-accent);
         }
 
         .links {
