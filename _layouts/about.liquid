@@ -84,13 +84,10 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.selected_papers %}
-    <section id="publications" class="home-section" aria-labelledby="home-publications">
-      <div class="home-section-heading">
-        <h2 id="home-publications">Selected Publications</h2>
-        <a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
-      </div>
-      {% include selected_papers.liquid %}
-    </section>
-  {% endif %}
+  <section id="publications" class="home-section" aria-labelledby="home-publications">
+    <h2 id="home-publications">Publications</h2>
+    <div class="publications">
+      {% bibliography --group_by none %}
+    </div>
+  </section>
 </div>

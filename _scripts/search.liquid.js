@@ -17,6 +17,14 @@ ninja.data = [
       window.location.href = "{{ '/' | relative_url }}";
     },
   },
+  {
+    id: "nav-publications",
+    title: "Publications",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "{{ '/' | relative_url }}#publications";
+    },
+  },
   {%- assign sorted_pages = site.pages | sort: "nav_order" -%}
   {%- for p in sorted_pages -%}
     {%- if p.nav and p.autogen == null -%}

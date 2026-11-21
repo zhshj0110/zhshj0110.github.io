@@ -5,7 +5,6 @@ permalink: /
 name_zh: 张少杰
 role: Research Engineer · Xiaomi MiLM Plus
 portrait: /assets/img/shaojie-zhang.jpg
-selected_papers: true
 social: true
 
 announcements:

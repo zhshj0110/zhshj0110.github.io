@@ -71,17 +71,14 @@
             {% if experience.contents %}
               <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
             {% endif %}
-            {% if page.selected_papers %}
-              <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-            {% endif %}
+            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          {% else %}
+            <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}#publications">Publications</a></li>
           {% endif %}
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if page.layout == 'about' and page.selected_papers and p.permalink == '/publications/' %}
-              {% continue %}
-            {% endif %}
             {% if p.nav and p.autogen == null %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
