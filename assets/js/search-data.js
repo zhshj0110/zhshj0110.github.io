@@ -17,14 +17,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/#publications";
     },
-  },{id: "nav-cv",
-          title: "CV",
-          description: "Curriculum vitae of Shaojie Zhang.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "news-two-papers-have-been-accepted-by-eccv-2026",
+  },{id: "news-two-papers-have-been-accepted-by-eccv-2026",
           title: '🎉 Two papers have been accepted by ECCV 2026.',
           description: "",
           section: "News",},{id: "news-the-technical-report-of-xiaomi-gui-0-has-been-released",
