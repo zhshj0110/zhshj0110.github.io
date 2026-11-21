@@ -1,73 +1,96 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+<div class="home-sections">
+  <section id="about" class="home-section home-intro" aria-labelledby="home-name">
+    <div>
+      <p class="home-role">{{ page.role }}</p>
+      <h1 id="home-name">
+        {{ site.first_name }}
+        {{ site.last_name }}
+        <span lang="zh-Hans">{{ page.name_zh }}</span>
+      </h1>
+      <div class="home-bio">{{ content }}</div>
+      {% if page.social %}
+        {% assign socials = site.data.socials %}
+        <ul class="home-contact">
+          {% if socials.email %}
+            <li><a href="mailto:{{ socials.email | encode_email }}">Email</a></li>
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          {% if socials.scholar_userid %}
+            <li><a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}">Google Scholar</a></li>
+          {% endif %}
+          {% if socials.github_username %}
+            <li><a href="https://github.com/{{ socials.github_username }}">GitHub</a></li>
+          {% endif %}
+          {% if socials.rss_icon %}
+            <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    </div>
+    {% if page.portrait %}
+      <img
+        class="home-portrait"
+        src="{{ page.portrait | relative_url | bust_file_cache }}"
+        alt="Portrait of {{ site.first_name }} {{ site.last_name }}"
+        width="640"
+        height="800"
+      >
+    {% endif %}
+  </section>
+
+  {% if page.announcements.enabled %}
+    <section id="news" class="home-section" aria-labelledby="home-news">
+      <div class="home-section-heading">
+        <h2 id="home-news">News</h2>
+        {% if page.announcements.limit and site.news.size > page.announcements.limit %}
+          <a href="{{ '/news/' | relative_url }}">All news &rarr;</a>
         {% endif %}
       </div>
-    {% endif %}
+      {% include news.liquid limit=true date_format='%b %Y' %}
+    </section>
+  {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+  {% if page.research %}
+    <section id="research" class="home-section" aria-labelledby="home-research">
+      <h2 id="home-research">Research</h2>
+      <div class="home-research">
+        {% for topic in page.research %}
+          <article>
+            <h3>{{ topic.title }}</h3>
+            <p>{{ topic.description }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+  {% assign experience = site.data.cv | where: 'title', 'Experience' | first %}
+  {% if experience.contents %}
+    <section id="experience" class="home-section" aria-labelledby="home-experience">
+      <h2 id="home-experience">Experience</h2>
+      <ul class="home-experience">
+        {% for position in experience.contents %}
+          <li>
+            <div>
+              <h3>{{ position.institution }}</h3>
+              <p>{{ position.title }}</p>
+            </div>
+            <span>{{ position.year }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h2>
+  {% if page.selected_papers %}
+    <section id="publications" class="home-section" aria-labelledby="home-publications">
+      <div class="home-section-heading">
+        <h2 id="home-publications">Selected Publications</h2>
+        <a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
+      </div>
       {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+    </section>
+  {% endif %}
 </div>

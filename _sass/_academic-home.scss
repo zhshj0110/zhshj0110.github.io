@@ -1,0 +1,335 @@
+.academic-home {
+  --home-accent: #9a4e23;
+  --home-muted: #655e57;
+  --home-rule: #e7ded5;
+  --home-mark: #cf8b54;
+  --global-theme-color: var(--home-accent);
+  --global-hover-color: var(--home-accent);
+
+  padding-bottom: 0;
+  font-family: "Avenir Next", Avenir, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+
+  > .container[role="main"] {
+    margin-top: 0 !important;
+  }
+
+  #navbar {
+    border-bottom: 1px solid var(--home-rule);
+    box-shadow: none;
+
+    .navbar-brand {
+      font-size: 1rem;
+      font-weight: 650;
+    }
+
+    .nav-link {
+      font-size: 0.875rem;
+    }
+  }
+
+  .home-section {
+    padding: 2.15rem 0 2.35rem;
+    border-bottom: 1px solid var(--home-rule);
+    scroll-margin-top: 57px;
+
+    h2 {
+      width: fit-content;
+      margin: 0 0 1.25rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--home-mark);
+      font:
+        500 1.65rem/1.2 Georgia,
+        serif;
+    }
+
+    h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      font-weight: 650;
+    }
+  }
+
+  .home-intro {
+    display: grid;
+    align-items: center;
+    gap: 1.65rem;
+    padding-top: clamp(2.5rem, 7vw, 4.75rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+
+    h1 {
+      margin: 0 0 1.1rem;
+      font:
+        500 clamp(2.15rem, 6vw, 3.65rem) / 1.12 Georgia,
+        serif;
+
+      span {
+        display: inline-block;
+        margin-left: 0.25rem;
+        color: var(--home-muted);
+        font-size: 0.52em;
+      }
+    }
+  }
+
+  .home-portrait {
+    display: block;
+    width: min(100%, 12rem);
+    height: auto;
+    border: 1px solid var(--home-rule);
+    border-radius: 0.5rem;
+  }
+
+  .home-role {
+    margin-bottom: 0.5rem;
+    color: var(--home-accent);
+    font-size: 0.88rem;
+    font-weight: 650;
+  }
+
+  .home-bio {
+    max-width: 64ch;
+  }
+
+  .home-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+    margin: 1.15rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+
+  .news .table {
+    --news-date-width: clamp(5.4rem, 13vw, 7.5rem);
+
+    margin-bottom: 0;
+    color: inherit;
+
+    th,
+    td {
+      padding: 0.24rem 0;
+    }
+
+    th {
+      padding-right: 0.75rem;
+      color: var(--home-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    td {
+      font-weight: inherit;
+    }
+  }
+
+  .home-research {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+
+    h3 {
+      color: var(--home-accent);
+    }
+  }
+
+  .home-research p,
+  .home-experience p {
+    margin: 0;
+    color: var(--home-muted);
+    font-size: 0.925rem;
+  }
+
+  .home-experience {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.25rem 1rem;
+    }
+
+    li + li {
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--home-rule);
+    }
+
+    span {
+      flex: none;
+      color: var(--home-muted);
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  .home-section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 1rem;
+
+    a {
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  .publications {
+    margin-top: 0;
+
+    ol.bibliography {
+      margin-bottom: 0;
+
+      > li {
+        margin: 0;
+        padding: 1.35rem 0;
+        border-top: 1px solid var(--home-rule);
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        > .row {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0.8rem 1.5rem;
+          margin: 0;
+
+          &:has(> .abbr) {
+            grid-template-columns: clamp(130px, 23%, 195px) minmax(0, 1fr);
+          }
+
+          > div {
+            width: auto;
+            min-width: 0;
+            max-width: none;
+            padding: 0;
+          }
+        }
+
+        .abbr,
+        figure {
+          margin: 0;
+        }
+
+        .abbr abbr {
+          display: none;
+        }
+
+        .preview {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 160px;
+          object-fit: contain;
+          border: 1px solid var(--home-rule);
+          box-shadow: none !important;
+        }
+
+        .title {
+          margin-bottom: 0.2rem;
+          font:
+            600 1.12rem/1.35 Georgia,
+            serif;
+        }
+
+        .author,
+        .periodical {
+          color: var(--home-muted);
+          font-size: 0.875rem;
+        }
+
+        .periodical {
+          color: var(--home-accent);
+        }
+
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.25rem 0.8rem;
+          margin-top: 0.35rem;
+
+          a.btn {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: var(--home-accent);
+            font-size: 0.825rem;
+            text-transform: none;
+
+            &:hover,
+            &:focus-visible {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-footer {
+    padding: 1.2rem 0 1.5rem;
+    color: var(--home-muted);
+    font-size: 0.82rem;
+  }
+}
+
+html[data-theme="dark"] .academic-home {
+  --home-accent: #efb480;
+  --home-muted: #c7bdb4;
+  --home-rule: #51463d;
+  --home-mark: #bd8456;
+}
+
+@media (min-width: 768px) {
+  .academic-home .home-intro:has(.home-portrait) {
+    grid-template-columns: minmax(0, 1fr) clamp(11rem, 24vw, 14.5rem);
+    gap: clamp(2rem, 5vw, 3.75rem);
+
+    .home-portrait {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .academic-home {
+    .home-section {
+      padding-top: 1.7rem;
+      padding-bottom: 1.85rem;
+    }
+
+    .home-intro {
+      padding-top: 2.5rem;
+    }
+
+    .home-research {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .home-experience li {
+      flex-direction: column;
+    }
+
+    .publications ol.bibliography > li > .row:has(> .abbr) {
+      grid-template-columns: minmax(0, 1fr);
+
+      .abbr {
+        width: min(100%, 200px);
+
+        &:not(:has(.preview)) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,17 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav
+    id="navbar"
+    class="navbar navbar-light {% if page.layout == 'about' %}navbar-expand-md{% else %}navbar-expand-sm{% endif %} {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}"
+    role="navigation"
+  >
     <div class="container">
-      {% if page.permalink != '/' %}
+      {% if page.layout == 'about' %}
+        <a class="navbar-brand" href="#about">
+          {{- site.first_name }}
+          {{ site.last_name -}}
+        </a>
+      {% elsif page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
@@ -47,18 +56,32 @@
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="{% if page.layout == 'about' %}#about{% else %}{{ '/' | relative_url }}{% endif %}">{{ about_title }}</a>
           </li>
+
+          {% if page.layout == 'about' %}
+            {% if page.announcements.enabled %}
+              <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+            {% endif %}
+            {% if page.research %}
+              <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+            {% endif %}
+            {% assign experience = site.data.cv | where: 'title', 'Experience' | first %}
+            {% if experience.contents %}
+              <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            {% endif %}
+            {% if page.selected_papers %}
+              <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+            {% endif %}
+          {% endif %}
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
+            {% if page.layout == 'about' and page.selected_papers and p.permalink == '/publications/' %}
+              {% continue %}
+            {% endif %}
             {% if p.nav and p.autogen == null %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}

@@ -2,22 +2,23 @@
 layout: about
 title: About
 permalink: /
-
-profile:
-  align: right
-
+name_zh: 张少杰
+role: Research Engineer · Xiaomi MiLM Plus
+portrait: /assets/img/shaojie-zhang.jpg
 selected_papers: true
 social: true
 
 announcements:
   enabled: true
-  scrollable: true
   limit: 5
 
-latest_posts:
-  enabled: false
+research:
+  - title: Multimodal Large Models
+    description: Vision-language models for visual understanding, OCR, and GUI interaction.
+  - title: Multimodal Reasoning
+    description: Visual reasoning and decision-making in GUI agents.
+  - title: Video Understanding
+    description: Query-aware frame selection and efficient video-language modeling.
 ---
 
-Hi! I am Shaojie Zhang (张少杰). I am currently a research engineer at Xiaomi's MiLM Plus Team. Before that, I have received my M.S. (2022-2025) and B.S. (2018-2022) degree in [Beijing University of Posts and Telecommunications](https://www.bupt.edu.cn/), advised by Prof. [Jianqin Yin](https://teacher.bupt.edu.cn/yinjianqin/zh_CN/index.htm).
-
-My research interests include **Multi-modal Large Models**, **Multi-modal Reasoning**, and **Video Understanding**.
+I am a research engineer at Xiaomi's MiLM Plus Team. I received my M.S. (2022–2025) and B.S. (2018–2022) from [Beijing University of Posts and Telecommunications](https://www.bupt.edu.cn/), where I was advised by Prof. [Jianqin Yin](https://teacher.bupt.edu.cn/yinjianqin/zh_CN/index.htm).

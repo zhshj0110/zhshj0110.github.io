@@ -14,9 +14,12 @@
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}
+        {% assign date_format = include.date_format | default: '%b %d, %Y' %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" style="width: var(--news-date-width, 20%)">
+              <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: date_format }}</time>
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}

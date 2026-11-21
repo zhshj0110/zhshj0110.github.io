@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $('.academic-home #navbar a[href^="#"]').on("click", function () {
+    $(".academic-home #navbarNav.show").collapse("hide");
+  });
+
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
